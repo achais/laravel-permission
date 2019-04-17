@@ -1,12 +1,12 @@
-<h1 align="center"> laravel-admin-permission </h1>
+<h1 align="center"> laravel-permission </h1>
 
-<p align="center"> admin and permission for laravel 5+.</p>
+<p align="center"> 📚 基于 spatie/laravel-permission 二次开发的按钮级权限管理 Laravel 扩展包。(角色、权限、菜单、按钮) </p>
 
 
 ## Installing
 
 ```shell
-$ composer require achais/laravel-admin-permission -vvv
+$ composer require achais/laravel-permission -vvv
 ```
 
 ## Usage
