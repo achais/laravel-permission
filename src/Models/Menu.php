@@ -168,7 +168,9 @@ class Menu extends Model implements MenuContract
                     'name' => $menu->name,
                     'url' => $menu->url,
                     'type' => $menu->type,
+                    'sign' => $menu->sign,
                     'sort' => $menu->sort,
+                    'remark' => $menu->remark,
                 ];
 
                 // 如果当前菜单不是父菜单，则直接返回
