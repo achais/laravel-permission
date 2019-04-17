@@ -71,7 +71,7 @@ class User extends Authenticatable
 
 关于角色和权限的操作请查看这里. [spatie/laravel-permission](https://github.com/spatie/laravel-permission)
 
-关于角色和菜单的操作继续往下看.
+关于角色和菜单的操作继续往下看. 😁😁😁
 
 创建一个角色和菜单
 ```php
@@ -98,11 +98,12 @@ $role->syncMenus($menus);
 $menu->syncRoles($roles);
 ```
 
-获取用户菜单树
-> 菜单类型分为: 目录、菜单、按钮
-> 目录: 无可查看的页面, 仅分类使用
-> 菜单: 可查看的页面
+> 菜单类型分为: 目录、菜单、按钮  
+> 目录: 无可查看的页面, 仅分类使用  
+> 菜单: 可查看的页面  
 > 按钮: 无可查看的页面, 仅在菜单页面内显示
+
+获取用户菜单树  
 
 ```php
 $user = \Auth::user();
