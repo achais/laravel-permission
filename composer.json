@@ -1,0 +1,28 @@
+{
+    "name": "achais\/laravel-permission",
+    "description": "menu, permission for laravel 5+",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "achais",
+            "email": "i@achais.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": "^5.5",
+        "spatie/laravel-permission": "^2.37"
+    },
+    "autoload": {
+        "psr-4": {
+            "Achais\\Permission\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Achais\\Permission\\PermissionServiceProvider"
+            ]
+        }
+    }
+}
