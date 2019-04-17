@@ -27,6 +27,7 @@ php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvid
 return [
     'models' => [
         // ...
+        'role' => Achais\Permission\Models\Role::class,
         'menu' => Achais\Permission\Models\Menu::class,
     ],
 
