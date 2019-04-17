@@ -1,6 +1,6 @@
 {
     "name": "achais\/laravel-permission",
-    "description": "menu, permission for laravel 5+",
+    "description": " \uD83D\uDCDA 基于 spatie/laravel-permission 二次开发的按钮级权限管理 Laravel 扩展包。(角色、权限、菜单、按钮) ",
     "license": "MIT",
     "authors": [
         {
