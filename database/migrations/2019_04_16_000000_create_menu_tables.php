@@ -52,6 +52,22 @@ class CreateMenuTables extends Migration
 
             $table->primary(['menu_id', 'role_id']);
         });
+
+        Schema::create($tableNames['menu_table'], function (Blueprint $table) use ($tableNames, $columnNames) {
+
+            $table->increments('id');
+            $table->unsignedInteger('menu_id');
+            $table->string('column_config');
+            $table->string('remark');
+            $table->unsignedInteger('sort');
+            $table->boolean('is_show');
+            $table->timestamps();
+
+            $table->foreign('menu_id')
+                ->references('id')
+                ->on($tableNames['menus'])
+                ->onDelete('cascade');
+        });
     }
 
     /**
@@ -65,5 +81,6 @@ class CreateMenuTables extends Migration
 
         Schema::drop($tableNames['role_has_menus']);
         Schema::drop($tableNames['menus']);
+        Schema::drop($tableNames['menu_table']);
     }
 }
