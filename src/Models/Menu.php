@@ -183,4 +183,26 @@ class Menu extends Model implements MenuContract
                 return $data;
             })->values();
     }
+
+    /**
+     * 递归菜单下的按钮
+     *
+     * @param $menus
+     * @param bool $recursive
+     * @return array
+     */
+    public static function recursiveButtons($menus, $recursive = true)
+    {
+        $buttons = [];
+        foreach ($menus as $index => $menu) {
+            if ($menu['type'] == Menu::TYPE_BUTTON) {
+                array_push($buttons, $menu);
+            }
+
+            if ($recursive && isset($menu['children'])) {
+                $buttons = array_merge($buttons, self::recursiveButtons($menu['children']));
+            }
+        }
+        return $buttons;
+    }
 }
