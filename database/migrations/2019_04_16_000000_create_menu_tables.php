@@ -25,6 +25,7 @@ class CreateMenuTables extends Migration
             $table->string('url')->default('#');
             $table->unsignedInteger('type')->default(0);
             $table->string('sign')->nullable();
+            $table->string('icon')->nullable();
             $table->string('remark')->nullable();
             $table->unsignedInteger('sort')->default(0);
             $table->timestamps();

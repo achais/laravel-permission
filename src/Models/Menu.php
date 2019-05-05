@@ -168,6 +168,7 @@ class Menu extends Model implements MenuContract
                     'name' => $menu->name,
                     'url' => $menu->url,
                     'type' => $menu->type,
+                    'icon' => $menu->icon,
                     'sign' => $menu->sign,
                     'sort' => $menu->sort,
                     'remark' => $menu->remark,

@@ -84,6 +84,7 @@ $menu = Menu::create([
     'name' => '文章列表',
     'url' => '/posts',
     'type' => Menu::TYPE_MENU,
+    'icon' => 'iconName',
 ]);
 ```
 
