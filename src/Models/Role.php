@@ -20,4 +20,17 @@ class Role extends SpatieRole implements ContractRole
             'menu_id'
         );
     }
+
+    public function getMenuTree($parentId = null, $showButton = false)
+    {
+        $allMenuIds = $this->menus
+            ->map(function ($menu) {
+                return array_merge(array_filter(explode('-', trim($menu->parent_path, '-'))), [$menu->id]);
+            })
+            ->collapse()
+            ->unique();
+
+        $allMenus = Menu::all()->whereIn('id', $allMenuIds);
+        return Menu::getMenuTree($parentId, $allMenus, $showButton);
+    }
 }
