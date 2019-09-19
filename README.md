@@ -35,6 +35,7 @@ return [
         // ...
         'menus' => 'menus',
         'role_has_menus' => 'role_has_menus',
+        'menu_table' => 'menu_table',
     ]
 ];
 ```
