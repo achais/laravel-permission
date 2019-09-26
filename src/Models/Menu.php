@@ -151,6 +151,8 @@ class Menu extends Model implements MenuContract
             // 从数据库中一次性取出所有菜单
             //$allMenus = Menu::all();
             $allMenus = Menu::query()->orderBy('level')->orderBy('sort')->get();
+        } else {
+            $allMenus = collect($allMenus)->sortBy('sort');
         }
 
         return $allMenus
