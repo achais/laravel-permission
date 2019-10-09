@@ -11,6 +11,24 @@ use Achais\Permission\Exceptions\MenuAlreadyExists;
 use Achais\Permission\Contracts\Menu as MenuContract;
 use Achais\Permission\Traits\HasRoles;
 
+/**
+ * Class Menu
+ *
+ * @property int $id
+ * @property int $level
+ * @property int|null $parent_id
+ * @property string $parent_path
+ * @property string $name
+ * @property string $url
+ * @property string|null $route
+ * @property string|null $method
+ * @property int $type
+ * @property string|null $sign
+ * @property string|null $icon
+ * @property string|null $remark
+ * @property int $sort
+ * @package Achais\Permission\Models
+ */
 class Menu extends Model implements MenuContract
 {
     use HasRoles;

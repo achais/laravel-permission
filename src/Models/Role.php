@@ -7,6 +7,14 @@ use Achais\Permission\Traits\HasMenus;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Spatie\Permission\Models\Role as SpatieRole;
 
+/**
+ * Class Role
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $guard_name
+ * @package Achais\Permission\Models
+ */
 class Role extends SpatieRole implements ContractRole
 {
     use HasMenus;
