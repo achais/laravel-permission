@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Closure;
 
 class AuthCheckRoles
@@ -19,7 +20,7 @@ class AuthCheckRoles
         $method = $request->method();
         $guardName = config('permission.role_guard_name');
 
-        //替换里面的路由的变量
+        // 替换里面的路由的变量
         $route = $this->replaceVariables($route);
         if (\Auth::guard($guardName)->check()) {
             $currentUser = \Auth::guard($guardName)->user();
@@ -27,11 +28,7 @@ class AuthCheckRoles
             $confirm = $this->hasConfirm($menus, $route, $method);
         }
         if (!$confirm) {
-            $content = [
-                'errmsg' => '未经授权',
-                'errcode' => '4001'
-            ];
-            return \Response::make($content, 500);
+            throw new AccessDeniedHttpException('Access Denied');
         }
 
         return $next($request);
