@@ -38,10 +38,7 @@ return [
         'menu_table' => 'menu_table',
     ],
 
-    /**
-     * 验证的用户类型
-     * role_guard_name的值 根据你auth.php 里面的guards中 用到的进行配置
-     */
+    // guard 名称
     'role_guard_name' => 'admin',
 
 ];
