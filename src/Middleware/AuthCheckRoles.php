@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Achais\Permission\Middleware;
 
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Closure;
