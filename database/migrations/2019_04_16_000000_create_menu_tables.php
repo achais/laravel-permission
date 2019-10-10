@@ -23,6 +23,8 @@ class CreateMenuTables extends Migration
             $table->string('parent_path');
             $table->string('name');
             $table->string('url')->default('#');
+            $table->string('route')->nullable();
+            $table->string('method')->nullable();
             $table->unsignedInteger('type')->default(0);
             $table->string('sign')->nullable();
             $table->string('icon')->nullable();

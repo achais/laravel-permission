@@ -36,7 +36,11 @@ return [
         'menus' => 'menus',
         'role_has_menus' => 'role_has_menus',
         'menu_table' => 'menu_table',
-    ]
+    ],
+
+    // guard 名称
+    'role_guard_name' => 'admin',
+
 ];
 ```
 
